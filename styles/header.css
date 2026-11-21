@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header.main {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: grey;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+img#h-img {
+    height: 32px;
+    width: auto;
+    display: block;
+}
+
+header h2 {
+    text-align: left;
+}
+
+header nav.list {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+header#nav-link {
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+nav.list a {
+    color: white;
+}

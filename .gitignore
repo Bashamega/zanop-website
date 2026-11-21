@@ -1,0 +1,7 @@
+# ide files
+*.swp
+.idea/
+.vscode/
+
+# misc files and directories
+archived/
