@@ -70,6 +70,17 @@
   background: #263449;
   border-color: #3b82f6;
 }
+.features-section .community {
+    display: flex;
+    justify-content: space-around;
+}
+.features-section .community .discord {
+    background-color: #5865F2;
+}
+.features-section .community .github{
+    background-color: #101411;
+    border: #fff solid 1px;
+}
 
 @media (max-width: 600px) {
   .features-section {
