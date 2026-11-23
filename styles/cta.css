@@ -35,14 +35,14 @@ div button.cta-btn {
     font-family: "Miranda Sans", sans-serif;
     font-size: 1rem;
     font-weight: 700;
-    background-color: green;
-    color: white;
+    background-color: #c4cbd0;
+    color: #111214;
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 div button.cta-btn:hover {
-    background-color: #00a000;
+    background-color: #e2e4e6;
     transform: translateY(-2px);
 }
 

@@ -26,25 +26,25 @@
 
 .release-card {
   padding: 28px;
-  border: 1px solid rgba(153, 235, 186, 0.16);
-  background: rgba(20, 32, 27, 0.58);
+  border: 1px solid rgba(211, 216, 220, 0.16);
+  background: rgba(25, 26, 28, 0.58);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   transition: border-color 180ms ease, background-color 180ms ease;
 }
 
 .release-card.latest {
-  border-color: rgba(153, 235, 186, 0.38);
+  border-color: rgba(211, 216, 220, 0.38);
 }
 
 .release-card:hover {
-  border-color: rgba(153, 235, 186, 0.55);
-  background: rgba(25, 42, 32, 0.72);
+  border-color: rgba(211, 216, 220, 0.55);
+  background: rgba(41, 43, 46, 0.72);
 }
 
 .release-status {
   margin-bottom: 16px;
-  color: #8ed9a7;
+  color: #b7bdc2;
   font-size: 0.9rem;
 }
 
@@ -65,19 +65,19 @@
   align-items: center;
   min-height: 44px;
   padding: 0 16px;
-  border: 1px solid rgba(164, 237, 185, 0.3);
+  border: 1px solid rgba(211, 216, 220, 0.3);
   border-radius: 8px;
-  background: rgba(142, 217, 167, 0.1);
-  color: #c6f5d2;
+  background: rgba(211, 216, 220, 0.1);
+  color: #d7dadc;
   font-weight: 600;
 }
 
 .release-link:hover {
-  background: rgba(142, 217, 167, 0.2);
+  background: rgba(211, 216, 220, 0.2);
 }
 
 .downloads-page a:focus-visible {
-  outline: 2px solid #a4edb9;
+  outline: 2px solid #d7dadc;
   outline-offset: 4px;
 }
 
