@@ -20,8 +20,8 @@
 }
 
 .features-section ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 14px;
 
   list-style: none;
