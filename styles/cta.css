@@ -48,3 +48,10 @@ div button.cta-btn:hover {
 div button.cta-btn:active {
     transform: translateY(0);
 }
+section#cta-section {
+    display: flex;
+    justify-content: space-between;
+}
+section#cta-section img{
+    width: 60%;
+}

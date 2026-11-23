@@ -1,0 +1,104 @@
+.features-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 32px;
+
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.features-section h2 {
+  margin-bottom: 24px;
+
+  color: #f8fafc;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.features-section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  list-style: none;
+}
+
+.features-section li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 16px;
+
+  color: #cbd5e1;
+  font-size: 1rem;
+  font-weight: 500;
+
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.features-section li::before {
+  content: "✓";
+  display: grid;
+  place-items: center;
+
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+
+  color: #60a5fa;
+  background: #1e3a5f;
+  border-radius: 50%;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.features-section li:hover {
+  transform: translateY(-2px);
+  background: #263449;
+  border-color: #3b82f6;
+}
+.features-section .community {
+    display: flex;
+    justify-content: space-around;
+}
+.features-section .community .discord {
+    background-color: #5865F2;
+}
+.features-section .community .github{
+    background-color: #101411;
+    border: #fff solid 1px;
+}
+
+@media (max-width: 600px) {
+  .features-section {
+    margin: 24px 16px;
+    padding: 22px;
+  }
+
+  .features-section h2 {
+    font-size: 1.35rem;
+  }
+
+  .features-section ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .features-section li {
+    transition: none;
+  }
+}
