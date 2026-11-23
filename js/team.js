@@ -41,6 +41,13 @@ const team = [
     avatar: "https://avatars.githubusercontent.com/u/217427055?v=4",
     avatarAlt: "Portrait of Morimura",
   },
+  {
+    name: "Hashes",
+    role: "Applications and Development Tools",
+    bio: "Develops applications",
+    avatar: "https://avatars.githubusercontent.com/u/280577634?v=4",
+    avatarAlt: "Portrait of Hashes"
+  }
 ];
 
 const teamGrid = document.querySelector("#team-grid");
