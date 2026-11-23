@@ -1,6 +1,7 @@
 section.cta-sect {
-    background-color: #1c1d1f;
     padding: 96px 24px;
+    position: relative;
+    z-index: 1;
 }
 
 div.cta-text {

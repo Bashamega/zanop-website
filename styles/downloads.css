@@ -1,0 +1,94 @@
+.downloads-page {
+  max-width: 1000px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.downloads-intro {
+  margin-bottom: 32px;
+}
+
+.downloads-intro h1 {
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  letter-spacing: -0.06em;
+}
+
+.downloads-intro p {
+  color: #c4cbd0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.release-list {
+  display: grid;
+  gap: 18px;
+}
+
+.release-card {
+  padding: 28px;
+  border: 1px solid rgba(153, 235, 186, 0.16);
+  background: rgba(20, 32, 27, 0.58);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.release-card.latest {
+  border-color: rgba(153, 235, 186, 0.38);
+}
+
+.release-card:hover {
+  border-color: rgba(153, 235, 186, 0.55);
+  background: rgba(25, 42, 32, 0.72);
+}
+
+.release-status {
+  margin-bottom: 16px;
+  color: #8ed9a7;
+  font-size: 0.9rem;
+}
+
+.release-card h2 {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+.release-description {
+  min-height: 3.2em;
+  margin-bottom: 24px;
+  color: #c4cbd0;
+  line-height: 1.6;
+}
+
+.release-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid rgba(164, 237, 185, 0.3);
+  border-radius: 8px;
+  background: rgba(142, 217, 167, 0.1);
+  color: #c6f5d2;
+  font-weight: 600;
+}
+
+.release-link:hover {
+  background: rgba(142, 217, 167, 0.2);
+}
+
+.downloads-page a:focus-visible {
+  outline: 2px solid #a4edb9;
+  outline-offset: 4px;
+}
+
+@media (max-width: 700px) {
+  .downloads-page {
+    padding-top: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .release-card {
+    transition: none;
+  }
+}
