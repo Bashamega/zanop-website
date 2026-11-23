@@ -2,7 +2,7 @@
 class SiteNavbar extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-            <header class="main">
+            <header class="main glass">
                 <a href="/" id="logo">
                     <img id="h-img" src="assets/logo.svg" alt="Zanop Technologies Logo">
                     <h2>Zanop Technologies</h2>
