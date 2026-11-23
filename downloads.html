@@ -12,61 +12,20 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/cta.css">
-    <link rel="stylesheet" href="styles/interactive.css">
+    <link rel="stylesheet" href="styles/downloads.css">
     <script src="js/nav.js" defer></script>
+    <script src="js/downloads.js" defer></script>
 </head>
 
 <body>
     <site-navbar></site-navbar>
-    <section class="cta-sect">
-        <div class="cta-text">
+    <main class="page downloads-page">
+        <header class="downloads-intro">
             <h1>Downloads</h1>
-            <small>Zanop Desktop OS, Public Developer Release builds.</small>
-        </div>
-    </section>
-    <section class="latest-release">
-        <div class="latest-release-badge">Latest</div>
-        <h1>v0.2 Chicago</h1>
-        <span>
-            The second Public Developer Release of Zanop Desktop OS.
-            <a href="https://github.com/Zanop-Technologies/zanop-desktop-os/releases/tag/v0.2-alpha">Get the release
-                from GitHub.</a>
-        </span>
-    </section>
-    <section class="latest-release">
-        <div class="latest-release-badge">Older</div>
-        <h1>v0.1 Chicago</h1>
-        <span>
-            The first Public Developer Release of Zanop Desktop OS.
-            <a href="https://github.com/Zanop-Technologies/zanop-desktop-os/releases/tag/v0.1-alpha">Get the release
-                from GitHub.</a>
-        </span>
-    </section>
-    <section class="latest-release">
-        <h1>Build status</h1>
-        <span>
-            What exists today, and what does not:
-        </span>
-        <table>
-            <tr>
-                <th>Build</th>
-                <th>Status</th>
-            </tr>
-            <tr>
-                <td>Stable release</td>
-                <td>None published</td>
-            </tr>
-            <tr>
-                <td>Nightly builds</td>
-                <td>Not produced; the project is written in C++</td>
-            </tr>
-            <tr>
-                <td>Source code</td>
-                <td>Published in the project repository</td>
-            </tr>
-        </table>
-    </section>
+            <p>Public Developer Release builds of Zanop Desktop OS.</p>
+        </header>
+        <section class="release-list" id="release-list" aria-label="Available releases"></section>
+    </main>
 </body>
 
 </html>
