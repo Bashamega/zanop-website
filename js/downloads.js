@@ -1,9 +1,14 @@
 const releases = [
   {
+    version: "v0.3 Chicago",
+    description: "The third Public Developer Release of Zanop Desktop OS.",
+    url: "https://github.com/Zanop-Technologies/zanop-desktop-os/releases/tag/v0.3-alpha",
+    latest: true
+  {
     version: "v0.2 Chicago",
     description: "The second Public Developer Release of Zanop Desktop OS.",
     url: "https://github.com/Zanop-Technologies/zanop-desktop-os/releases/tag/v0.2-alpha",
-    latest: true,
+    latest: false,
   },
   {
     version: "v0.1 Chicago",
