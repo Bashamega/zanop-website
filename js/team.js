@@ -42,6 +42,13 @@ const team = [
     avatarAlt: "Portrait of Morimura",
   },
   {
+    name: "Daniel",
+    role: "Kernel Developer",
+    bio: "Develops our kernel.",
+    avatar: "https://avatars.githubusercontent.com/u/319055929?v=4",
+    avatarAlt: "Portrait of Daniel",
+  },
+  {
     name: "Hashes",
     role: "Applications and Development Tools",
     bio: "Develops applications",
