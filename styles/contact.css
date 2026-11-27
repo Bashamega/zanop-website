@@ -78,7 +78,10 @@
   min-height: 150px;
   padding: 24px 28px;
   color: #fff;
-  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
 }
 
 .contact-link .contact-label {
