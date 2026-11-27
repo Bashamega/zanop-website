@@ -59,3 +59,41 @@ section#cta-section {
 section#cta-section img{
     width: 60%;
 }
+section#cta-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+section#cta-section img {
+    width: 60%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    section#cta-section {
+        gap: 1.5rem;
+    }
+
+    section#cta-section img {
+        width: 50%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    section#cta-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    section#cta-section img {
+        width: 100%;
+        max-width: 450px;
+    }
+}
