@@ -47,6 +47,13 @@ const team = [
     bio: "Develops applications",
     avatar: "https://avatars.githubusercontent.com/u/280577634?v=4",
     avatarAlt: "Portrait of Hashes"
+  },
+  {
+    name: "Centolinho",
+    role: "Frontend Project manager",
+    bio: "Frontend dev",
+    avatar: "https://avatars.githubusercontent.com/u/70218002?v=4",
+    avatarAlt: "Portrait of Centolinho"
   }
 ];
 
