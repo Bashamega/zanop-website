@@ -23,5 +23,8 @@ jobs:
       - name: Validate HTML
         run: npx --yes html-validate@10.4.0 "**/*.html"
 
+      - name: Detect broken links
+        run: python3 scripts/check-links.py
+
       - name: Check formatting
         run: npx --yes prettier@3.6.2 --check "**/*.{css,js}"
