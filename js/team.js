@@ -8,8 +8,8 @@ const team = [
   },
   {
     name: "Adam Naji",
-    role: "Frontend Developer & Backend Developer",
-    bio: "Codes our front and back.",
+    role: "Project Manager & Full-Stack Developer",
+    bio: "Leads project development, coordinates the team, and oversees frontend and backend implementation.",
     avatar: "https://avatars.githubusercontent.com/u/110662505?s=96&v=4",
     avatarAlt: "Portrait of Adam",
   },
