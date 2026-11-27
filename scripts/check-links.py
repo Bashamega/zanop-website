@@ -3,6 +3,7 @@
 import sys
 import urllib.parse
 import urllib.request
+import urllib.error
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -36,28 +37,32 @@ def read_html(path):
 
 
 def check_external(url):
-    request = urllib.request.Request(
-        url,
-        method="HEAD",
-        headers={"User-Agent": "Mozilla/5.0 (Zanop link checker)"},
-    )
-    try:
-        with urllib.request.urlopen(request, timeout=10) as response:
-            return response.status < 400
-    except urllib.error.HTTPError as error:
-        if error.code in (403, 405):
-            request = urllib.request.Request(
-                url,
-                headers={"User-Agent": "Mozilla/5.0 (Zanop link checker)"},
-            )
-            try:
-                with urllib.request.urlopen(request, timeout=10) as response:
-                    return response.status < 400
-            except Exception:
-                return True
-        return False
-    except Exception:
-        return True
+    methods = ("HEAD", "GET")
+
+    for method in methods:
+        request = urllib.request.Request(
+            url,
+            method=method,
+            headers={"User-Agent": "Mozilla/5.0 (Zanop link checker)"},
+        )
+
+        try:
+            with urllib.request.urlopen(request, timeout=10) as response:
+                if response.status < 400:
+                    return True
+        except urllib.error.HTTPError as error:
+            if error.code in (404, 410):
+                return False
+            if method == "HEAD":
+                continue
+        except (urllib.error.URLError, TimeoutError, OSError):
+            continue
+        except Exception:
+            continue
+
+    # Access restrictions, DNS changes, and temporary network failures are
+    # not evidence that a link is broken.
+    return True
 
 
 broken = []
