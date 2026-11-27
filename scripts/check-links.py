@@ -52,10 +52,9 @@ def check_external(url):
                 if response.status < 400:
                     return True
         except urllib.error.HTTPError as error:
-            if error.code in (404, 410):
+            if method == "GET" and error.code in (404, 410):
                 return False
-            if method == "HEAD":
-                continue
+            continue
         except (urllib.error.URLError, TimeoutError, OSError):
             continue
         except Exception:
