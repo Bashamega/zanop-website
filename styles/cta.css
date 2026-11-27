@@ -52,6 +52,12 @@ a.cta-btn:hover {
 a.cta-btn:active {
     transform: translateY(0);
 }
+
+.homepage-actions {
+    display: flex;
+    gap: 12px;
+}
+
 section#cta-section {
     display: flex;
     justify-content: space-between;
