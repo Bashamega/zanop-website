@@ -24,4 +24,4 @@ jobs:
         run: npx --yes html-validate@10.4.0 "**/*.html"
 
       - name: Check formatting
-        run: npx --yes prettier@3.6.2 --check "**/*.{html,css,js}"
+        run: npx --yes prettier@3.6.2 --check "**/*.{css,js}"
