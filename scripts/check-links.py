@@ -10,6 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 IGNORED_SCHEMES = {"mailto", "tel", "javascript", "data"}
+IGNORED_DOMAINS = ["gstatic.com", "googleapis.com"] # Ignore google websites
 
 
 class LinkParser(HTMLParser):
@@ -80,6 +81,12 @@ for html_file in html_files:
         if parsed.scheme.lower() in IGNORED_SCHEMES:
             continue
         if parsed.scheme.lower() in ("http", "https"):
+            hostname = (parsed.hostname or "").lower()
+            if any(
+                hostname == domain or hostname.endswith(f".{domain}")
+                for domain in IGNORED_DOMAINS
+            ):
+                continue
             if not check_external(link):
                 broken.append(f"{html_file.relative_to(ROOT)}: broken external {attribute}={raw_link}")
             continue
