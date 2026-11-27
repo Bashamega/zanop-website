@@ -20,33 +20,35 @@ const releases = [
 ];
 
 const releaseList = document.querySelector("#release-list");
-if (!releaseList) {
-  throw new Error("Release list element was not found.");
-}
+const releaseButton = document.querySelector("#download-btn");
+if (releaseList) {
+  for (const release of releases) {
+    const card = document.createElement("article");
+    card.classList.add("release-card", "glass");
+    if (release.latest) {
+      card.classList.add("latest");
+    }
 
-for (const release of releases) {
-  const card = document.createElement("article");
-  card.classList.add("release-card", "glass");
-  if (release.latest) {
-    card.classList.add("latest");
+    const status = document.createElement("p");
+    status.className = "release-status";
+    status.textContent = release.latest ? "Latest release" : "Previous release";
+
+    const title = document.createElement("h2");
+    title.textContent = release.version;
+
+    const description = document.createElement("p");
+    description.className = "release-description";
+    description.textContent = release.description;
+
+    const link = document.createElement("a");
+    link.className = "release-link";
+    link.href = release.url;
+    link.textContent = "View release on GitHub";
+
+    card.append(status, title, description, link);
+    releaseList.append(card);
   }
-
-  const status = document.createElement("p");
-  status.className = "release-status";
-  status.textContent = release.latest ? "Latest release" : "Previous release";
-
-  const title = document.createElement("h2");
-  title.textContent = release.version;
-
-  const description = document.createElement("p");
-  description.className = "release-description";
-  description.textContent = release.description;
-
-  const link = document.createElement("a");
-  link.className = "release-link";
-  link.href = release.url;
-  link.textContent = "View release on GitHub";
-
-  card.append(status, title, description, link);
-  releaseList.append(card);
+}
+if (releaseButton) {
+  releaseButton.href = releases[0].url;
 }
