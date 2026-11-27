@@ -76,10 +76,11 @@
 }
 .features-section .community .discord {
     background-color: #5865F2;
+    color: #fff !important;
 }
 .features-section .community .github{
     background-color: #101411;
-    color: #fff;
+    color: #fff !important;
     border: #fff solid 1px;
 }
 
