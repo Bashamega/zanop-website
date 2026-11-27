@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zanop-technologies.cc.cd/sitemap.xml
