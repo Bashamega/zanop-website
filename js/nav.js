@@ -65,7 +65,9 @@ class SiteNavbar extends HTMLElement {
 
     countdowns.forEach(({ name, timeZone, day }) => {
       const days = getDaysUntil(12, day, timeZone);
-      const countdown = this.querySelector(`[data-countdown="${name}"]`).closest("p");
+      const countdown = this.querySelector(
+        `[data-countdown="${name}"]`,
+      ).closest("p");
 
       if (days <= 0) {
         countdown.hidden = true;
